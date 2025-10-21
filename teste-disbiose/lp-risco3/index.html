@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚨 Atenção Máxima! Seu Intestino Precisa de Cuidados Urgentes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  }
+  
+  .hero-bg {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  }
+  
+  .btn-primary-yellow {
+    background: linear-gradient(135deg, #fde68a 0%, #facc15 100%);
+    transition: all 0.3s ease;  
+    box-shadow: 0 4px 15px rgba(253, 230, 138, 0.3);
+  }
+
+  .btn-primary-red {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  }
+
+  .btn-primary-yellow{
+    background: linear-gradient(135deg, #fde68a 0%, #facc15 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(253, 230, 138, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+  }
+  
+  .natural-pattern {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="leaves" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20,5 Q30,15 20,25 Q10,15 20,5" fill="%23dc2626" opacity="0.1"/><path d="M5,20 Q15,30 25,20 Q15,10 5,20" fill="%23b91c1c" opacity="0.1"/></pattern></defs><rect width="200" height="200" fill="url(%23leaves)"/></svg>');
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .section-spacing {
+    padding: 5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .section-spacing {
+      padding: 3rem 0;
+    }
+  }
+</style>
+</head>
+<body class="bg-gradient-to-br from-red-50 to-rose-50">
+
+<!-- Hero Section -->
+<section class="hero-bg section-spacing px-6 text-center text-white relative">
+  <div class="relative z-10 max-w-5xl mx-auto">
+    <div class="mb-6 fade-in">
+      <span class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium mb-4">
+        🚨 Resultado do seu teste: Sintomas de Disbiose Presentes
+      </span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-bold mb-8 fade-in text-shadow leading-tight">
+      🚨 <span class="text-yellow-300">Atenção Máxima!</span><br>
+      Seu Intestino Precisa de Cuidados
+    </h1>
+    <p class="text-xl md:text-2xl mb-10 fade-in opacity-90 leading-relaxed">
+      Sintomas de <span class="text-yellow-300 font-semibold">disbiose estão presentes</span> e podem prejudicar sua saúde.<br>
+      <span class="font-semibold">É hora de agir imediatamente!</span>
+    </p>
+    <div class="fade-in">
+      <a href="#cta" class="btn-primary-yellow text-black font-bold py-5 px-12 rounded-full text-lg inline-block">
+        🚨 Reverter Disbiose Agora
+      </a>
+      <p class="text-sm mt-4 opacity-80">✨ Garantia de 7 dias • Método Natural</p>
+    </div>
+  </div>
+</section>
+
+<!-- Problema / Oportunidade -->
+<section class="max-w-6xl mx-auto section-spacing px-6 text-center natural-pattern">
+  <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 fade-in text-gray-800">
+      🚨 <span class="text-red-500">Altos Índices de ter Disbiose!</span><br>
+      Seus Sintomas Não Podem Esperar
+    </h2>
+    <p class="text-gray-600 text-lg md:text-xl mb-8 fade-in leading-relaxed">
+      Seu teste confirmou <strong>sintomas de disbiose presentes</strong> que estão prejudicando sua saúde. 
+      <span class="text-red-500 font-semibold">Ação imediata é necessária</span> para reverter o quadro e evitar complicações graves.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 fade-in">
+      <div class="bg-red-50 p-6 rounded-2xl border-l-4 border-red-400">
+        <div class="text-red-500 text-3xl mb-3">🚨</div>
+        <h3 class="font-bold text-red-700 mb-2">Disbiose Ativa</h3>
+        <p class="text-red-600 text-sm">Sintomas confirmados e prejudicando sua saúde</p>
+      </div>
+      <div class="bg-orange-50 p-6 rounded-2xl border-l-4 border-orange-400">
+        <div class="text-orange-500 text-3xl mb-3">⏰</div>
+        <h3 class="font-bold text-orange-700 mb-2">Urgência Crítica</h3>
+        <p class="text-orange-600 text-sm">Não há tempo a perder - ação imediata necessária</p>
+      </div>
+      <div class="bg-yellow-50 p-6 rounded-2xl border-l-4 border-yellow-400">
+        <div class="text-yellow-500 text-3xl mb-3">💊</div>
+        <h3 class="font-bold text-yellow-700 mb-2">Reversão Urgente</h3>
+        <p class="text-yellow-600 text-sm">Protocolo específico para reverter a disbiose</p>
+      </div>
+    </div>
+    
+    <div class="mt-8 fade-in">
+      <div class="bg-red-50 border border-red-200 rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-red-700 mb-4">🚨 Sintomas de Disbiose Que Você Pode Estar Sentindo:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-600">
+          <div>• Fadiga constante e energia baixa</div>
+          <div>• Inchaço e gases frequentes</div>
+          <div>• Constipação ou diarreia recorrente</div>
+          <div>• Mudanças de humor e irritabilidade</div>
+          <div>• Problemas de pele (acne, manchas)</div>
+          <div>• Desejo exagerado por doces e carboidratos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solução / Protocolo -->
+<section class="bg-gradient-to-br from-white to-red-50 section-spacing px-6 text-center">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-12 fade-in">
+      <span class="inline-block bg-red-100 text-red-700 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+        🚨 Protocolo de Reversão Urgente • 21 Dias
+      </span>
+      <h2 class="text-3xl md:text-5xl font-bold mb-8 text-gray-800">
+        O <span class="text-red-600">Protocolo de Reversão</span><br>
+        Para Combater a Disbiose
+      </h2>
+      <p class="text-gray-600 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto">
+        Reverta os sintomas de disbiose com um protocolo específico e eficaz.
+        <span class="text-red-600 font-semibold">Ação imediata é necessária</span> para restaurar sua saúde intestinal.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+      <div class="card-hover bg-white p-8 rounded-3xl shadow-lg border border-red-100">
+        <div class="text-red-500 text-4xl mb-4">📅</div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">21 Dias de Reversão Intensiva</h3>
+        <p class="text-gray-600 leading-relaxed">Cronograma específico para reverter sintomas de disbiose e restaurar o equilíbrio intestinal</p>
+      </div>
+      
+      <div class="card-hover bg-white p-8 rounded-3xl shadow-lg border border-red-100">
+        <div class="text-red-500 text-4xl mb-4">🍃</div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">Receitas de Reversão</h3>
+        <p class="text-gray-600 leading-relaxed">Refeições específicas para combater a disbiose e restaurar a microbiota intestinal</p>
+      </div>
+      
+      <div class="card-hover bg-white p-8 rounded-3xl shadow-lg border border-red-100">
+        <div class="text-red-500 text-4xl mb-4">🛒</div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">Lista de Compras de Emergência</h3>
+        <p class="text-gray-600 leading-relaxed">Alimentos específicos para combater a disbiose e acelerar a recuperação intestinal</p>
+      </div>
+      
+      <div class="card-hover bg-white p-8 rounded-3xl shadow-lg border border-red-100">
+        <div class="text-red-500 text-4xl mb-4">🌱</div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">Protocolo de Emergência</h3>
+        <p class="text-gray-600 leading-relaxed">Estratégias urgentes para reverter a disbiose e restaurar rapidamente a saúde intestinal</p>
+      </div>
+    </div>
+    
+    <div class="mt-12 fade-in">
+      <div class="bg-green-50 border border-green-200 rounded-2xl p-8 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-red-700 mb-4">🚨 Ação Imediata Necessária</h3>
+        <p class="text-red-600 text-lg">Reverta agora • Combata a disbiose • Restaure a saúde • Resultados em 7 dias</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prova Social -->
+<section class="max-w-6xl mx-auto section-spacing px-6 text-center bg-gradient-to-br from-red-50 to-rose-50">
+  <div class="mb-12 fade-in">
+    <span class="inline-block bg-red-100 text-red-700 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+      🚨 História de Reversão Bem-Sucedida
+    </span>
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+      Como <span class="text-red-600">Reverter</span> a Disbiose<br>
+      Antes Que Seja Tarde Demais
+    </h2>
+    <p class="text-gray-600 text-xl leading-relaxed max-w-4xl mx-auto">
+      Durante anos, sofri com sintomas graves de disbiose que quase destruíram minha saúde. 
+      Hoje, <span class="text-red-600 font-semibold">mais de 10 anos depois</span>, consegui reverter completamente o quadro.
+    </p>
+  </div>
+  
+  <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 fade-in shadow-xl">
+    <div class="text-center mb-8">
+      <div class="text-red-500 text-5xl mb-4">🚨</div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Minha História de Reversão</h3>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+      <div class="space-y-4">
+        <h4 class="text-lg font-bold text-red-600 mb-3">🚨 O Que Eu Sofria:</h4>
+        <div class="space-y-2 text-gray-600">
+          <div>• Sintomas graves de disbiose</div>
+          <div>• Fadiga constante e energia baixa</div>
+          <div>• Problemas digestivos severos</div>
+          <div>• Imunidade comprometida</div>
+          <div>• Qualidade de vida destruída</div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <h4 class="text-lg font-bold text-red-600 mb-3">✅ O Que Consegui:</h4>
+        <div class="space-y-2 text-gray-600">
+          <div>• Reversão completa da disbiose</div>
+          <div>• Saúde intestinal restaurada</div>
+          <div>• Energia e vitalidade renovadas</div>
+          <div>• Sistema imunológico fortalecido</div>
+          <div>• Qualidade de vida transformada</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 text-center">
+      <p class="text-lg text-gray-700 italic">
+        "Mesmo com sintomas graves, consegui reverter completamente a disbiose. Você também pode!"
+      </p>
+    </div>
+  </div>
+  
+  <div class="mt-12 fade-in">
+    <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto shadow-xl">
+      <div class="flex items-center justify-center space-x-8 text-center">
+        <div>
+          <div class="text-3xl font-bold text-red-600">21 dias</div>
+          <div class="text-gray-600">Reversão Completa</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-red-600">100%</div>
+          <div class="text-gray-600">Natural</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-red-600">7 dias</div>
+          <div class="text-gray-600">Garantia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Preço -->
+<section id="cta" class="hero-bg section-spacing px-6 text-center text-white relative">
+  <div class="relative z-10 max-w-5xl mx-auto">
+    <div class="mb-8 fade-in">
+      <span class="inline-block bg-white bg-opacity-20 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+        ⚡ Oferta Limitada • Últimas Vagas
+      </span>
+    </div>
+    
+    <h2 class="text-4xl md:text-6xl font-bold mb-8 fade-in text-shadow leading-tight">
+      🚨 <span class="text-yellow-300">Não Espere Mais!</span><br>
+      Reverta a Disbiose Agora
+    </h2>
+    
+    <p class="text-xl md:text-2xl mb-12 fade-in opacity-90 leading-relaxed">
+      Sintomas de disbiose estão presentes e podem prejudicar sua saúde.<br>
+      <span class="font-semibold">É hora de agir imediatamente!</span>
+    </p>
+    
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 md:p-12 mb-12 fade-in">
+      <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
+        <div class="text-center">
+          <div class="text-sm opacity-80 mb-2">Preço Original</div>
+          <div class="text-2xl line-through opacity-70">R$ 97,00</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-sm opacity-80 mb-2">Preço Especial</div>
+          <div class="text-5xl md:text-6xl font-bold text-yellow-300">R$ 37,00</div>
+          <div class="text-sm opacity-80">à vista</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-sm opacity-80 mb-2">Você Economiza</div>
+          <div class="text-2xl font-bold text-yellow-300">R$ 60,00</div>
+          <div class="text-sm opacity-80">62% OFF</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fade-in">
+      <a href="https://seulandingpage.com/baixo-risco" class="bg-white text-red-600 font-bold py-6 px-16 rounded-full text-xl transition duration-300 hover:bg-red-100 hover:scale-105 inline-block shadow-2xl">
+        🚨 Reverter Disbiose Agora
+      </a>
+      
+      <div class="mt-8 space-y-4">
+        <p class="text-sm opacity-80">✨ Garantia de 7 dias • Método Natural • Sem Efeitos Colaterais</p>
+        <p class="text-sm opacity-70">🔒 Pagamento 100% Seguro • Acesso Imediato</p>
+      </div>
+      
+      <div class="mt-8 bg-white bg-opacity-10 rounded-2xl p-6 max-w-2xl mx-auto">
+        <h3 class="text-lg font-semibold mb-4">⚠️ Última Chance</h3>
+        <p class="text-sm opacity-90">
+          Esta oferta especial expira em <strong>24 horas</strong>. 
+          Não perca a oportunidade de reverter a disbiose antes que ela cause mais danos à sua saúde.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bloqueio de cópia -->
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (
+      (e.ctrlKey && ['c','s','u','i'].includes(e.key.toLowerCase())) ||
+      (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+      e.key === 'F12' ||
+      e.key === 'PrintScreen'
+    ) e.preventDefault();
+  });
+</script>
+
+</body>
+</html>

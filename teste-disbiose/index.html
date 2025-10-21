@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teste de Disbiose Intestinal - Descubra Seu Risco</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .hero-bg {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .hidden { 
+    display: none; 
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .answer-btn {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+  }
+  
+  .answer-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  }
+  
+  .answer-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+  
+  .progress-bar {
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    transition: width 0.5s ease;
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  }
+  
+  .natural-pattern {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="leaves" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20,5 Q30,15 20,25 Q10,15 20,5" fill="%2310b981" opacity="0.1"/><path d="M5,20 Q15,30 25,20 Q15,10 5,20" fill="%23059669" opacity="0.1"/></pattern></defs><rect width="200" height="200" fill="url(%23leaves)"/></svg>');
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+
+<!-- Container Principal -->
+<div class="w-full max-w-4xl mx-auto px-6">
+  
+  <!-- Conteúdo Principal -->
+  <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl natural-pattern">
+    
+    <!-- Tela Inicial -->
+    <div id="start-screen" class="text-center fade-in">
+      <div class="mb-6">
+        <div class="text-green-500 text-5xl mb-4 pulse">🔬</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+          Teste de <span class="text-green-600">Disbiose Intestinal</span>
+        </h2>
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Descubra se seus sintomas podem estar relacionados ao <strong class="text-green-600">desequilíbrio da microbiota intestinal</strong>.
+        </p>
+        <div class="bg-green-50 border border-green-200 rounded-2xl p-4 mb-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-sm text-green-600">
+            <div>• Seu nível de risco</div>
+            <div>• Sintomas relacionados</div>
+            <div>• Solução personalizada</div>
+          </div>
+        </div>
+      </div>
+      <button id="start-btn" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 pulse">
+        🚀 Começar Teste
+      </button>
+      <p class="text-xs text-gray-500 mt-3">⏱️ 2 minutos • 100% Gratuito</p>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz" class="hidden">
+      <div class="mb-4">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-semibold text-gray-600">Progresso</span>
+          <span id="progress-text" class="text-sm font-semibold text-green-600">1/8</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+          <div id="progress-bar" class="progress-bar h-2 rounded-full" style="width: 12.5%"></div>
+        </div>
+      </div>
+
+      <div id="question-container" class="card-hover bg-white p-6 rounded-2xl shadow-lg border border-green-100 slide-in">
+        <h2 id="question-text" class="text-xl md:text-2xl font-bold mb-4 text-gray-800"></h2>
+        <div id="answers" class="space-y-3"></div>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result-screen" class="hidden text-center">
+      <div class="mb-8">
+        <div id="result-icon" class="text-6xl mb-6 fade-in"></div>
+        <h2 id="result-title" class="text-3xl md:text-4xl font-bold mb-6 fade-in"></h2>
+        <p id="result-text" class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6 fade-in"></p>
+        <div id="result-score" class="bg-green-50 border border-green-200 rounded-2xl p-6 mb-8 fade-in">
+          <p class="text-green-700 font-semibold text-lg"></p>
+        </div>
+      </div>
+      <a id="result-cta" href="#" class="btn-primary text-white font-bold py-5 px-12 rounded-full text-xl transition duration-300 fade-in">
+        🚀 Ver Minha Solução Personalizada
+      </a>
+      <p class="text-sm text-gray-500 mt-4 fade-in">✨ Solução 100% Natural • Garantia de 7 dias</p>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+const questions = [
+  { text: "Como você se sente após as refeições?", answers: [
+    { text: "🕊️ Leve e sem desconforto - digestão perfeita", points: 0 },
+    { text: "🌤️ Um pouco inchado, mas passa em 30 minutos", points: 1 },
+    { text: "🌪️ Sempre estufado, com gases e sensação de peso", points: 2 },
+    { text: "💥 Muito inchado, gases constantes e desconforto severo", points: 3 }
+  ]},
+  { text: "Com que frequência você tem problemas intestinais?", answers: [
+    { text: "🛡️ Raramente - intestino funciona perfeitamente", points: 0 },
+    { text: "⏳ Algumas vezes por mês - pequenos desequilíbrios", points: 1 },
+    { text: "🔥 Semanalmente - constipação ou diarreia frequente", points: 2 },
+    { text: "🚨 Diariamente - problemas intestinais constantes", points: 3 }
+  ]},
+  { text: "Como está seu nível de energia ao longo do dia?", answers: [
+    { text: "🌅 Energia constante - me sinto vital e disposto", points: 0 },
+    { text: "🌤️ Energia boa - pequenas quedas após refeições", points: 1 },
+    { text: "🌙 Energia baixa - cansaço frequente e falta de disposição", points: 2 },
+    { text: "🪫 Energia muito baixa - fadiga constante e exaustão", points: 3 }
+  ]},
+  { text: "Como está sua imunidade?", answers: [
+    { text: "🛡️ Excelente - raramente fico doente", points: 0 },
+    { text: "🌦️ Boa - resfriados ocasionais (1-2 por ano)", points: 1 },
+    { text: "⚠️ Regular - resfriados e gripes frequentes", points: 2 },
+    { text: "🚨 Baixa - fico doente constantemente", points: 3 }
+  ]},
+  { text: "Você sente desejo intenso por doces ou carboidratos?", answers: [
+    { text: "🍏 Não - não tenho compulsão por doces", points: 0 },
+    { text: "🍪 Às vezes - desejo ocasional por doces", points: 1 },
+    { text: "🍩 Frequentemente - desejo forte por doces e carboidratos", points: 2 },
+    { text: "🍭 Constantemente - compulsão incontrolável por doces", points: 3 }
+  ]},
+  { text: "Como está sua pele?", answers: [
+    { text: "✨ Perfeita - pele saudável e sem problemas", points: 0 },
+    { text: "🌱 Boa - pequenas imperfeições ocasionais", points: 1 },
+    { text: "🌾 Regular - acne, manchas ou irritações frequentes", points: 2 },
+    { text: "🌋 Problemática - problemas severos de pele constantes", points: 3 }
+  ]},
+  { text: "Como está seu humor e bem-estar mental?", answers: [
+    { text: "😊 Estável - humor equilibrado e bem-estar constante", points: 0 },
+    { text: "😌 Bom - pequenas oscilações ocasionais", points: 1 },
+    { text: "😰 Irregular - mudanças de humor frequentes", points: 2 },
+    { text: "😫 Instável - humor muito oscilante e irritabilidade", points: 3 }
+  ]},
+  { text: "Como você reage a alimentos processados?", answers: [
+    { text: "🍎 Sem problemas - digerido normalmente", points: 0 },
+    { text: "🥪 Leve desconforto - pequenos sintomas", points: 1 },
+    { text: "🍔 Problemas moderados - desconforto significativo", points: 2 },
+    { text: "💥 Problemas severos - reações intensas", points: 3 }
+  ]}
+];
+
+let currentQuestion = 0;
+let totalPoints = 0;
+
+const startBtn = document.getElementById('start-btn');
+const startScreen = document.getElementById('start-screen');
+const quiz = document.getElementById('quiz');
+const questionText = document.getElementById('question-text');
+const answersDiv = document.getElementById('answers');
+const progressText = document.getElementById('progress-text');
+const progressBar = document.getElementById('progress-bar');
+const questionContainer = document.getElementById('question-container');
+const resultScreen = document.getElementById('result-screen');
+const resultTitle = document.getElementById('result-title');
+const resultText = document.getElementById('result-text');
+const resultScore = document.getElementById('result-score');
+const resultCTA = document.getElementById('result-cta');
+const resultIcon = document.getElementById('result-icon');
+
+startBtn.addEventListener('click', () => {
+  startScreen.classList.add('hidden');
+  quiz.classList.remove('hidden');
+  setTimeout(() => showQuestion(), 300);
+});
+
+function showQuestion() {
+  const q = questions[currentQuestion];
+  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  
+  progressText.textContent = `${currentQuestion + 1}/${questions.length}`;
+  progressBar.style.width = `${progress}%`;
+  
+  questionContainer.classList.add('slide-in');
+  setTimeout(() => questionContainer.classList.remove('slide-in'), 50);
+
+  questionText.textContent = q.text;
+  answersDiv.innerHTML = '';
+  
+  q.answers.forEach((ans, index) => {
+    const btn = document.createElement('button');
+    btn.textContent = ans.text;
+    btn.className = "w-full text-left text-white py-3 px-4 rounded-2xl font-semibold answer-btn text-base";
+    btn.style.animationDelay = `${index * 0.1}s`;
+    btn.addEventListener('click', () => selectAnswer(ans.points));
+    answersDiv.appendChild(btn);
+  });
+}
+
+function selectAnswer(points) {
+  totalPoints += points;
+  currentQuestion++;
+  
+  // Animação de saída
+  questionContainer.style.transform = 'translateX(-100px)';
+  questionContainer.style.opacity = '0';
+  
+  setTimeout(() => {
+    if (currentQuestion < questions.length) {
+      // Reset da animação
+      questionContainer.style.transform = '';
+      questionContainer.style.opacity = '';
+      showQuestion();
+    } else {
+      setTimeout(showResult, 300);
+    }
+  }, 200);
+}
+
+function showResult() {
+  quiz.classList.add('hidden');
+  resultScreen.classList.remove('hidden');
+
+  // Cálculo da pontuação (0-24 pontos possíveis)
+  const maxPoints = questions.length * 3; // 8 perguntas × 3 pontos máximos
+  const scorePercentage = (totalPoints / maxPoints) * 100;
+  
+  let title = '', text = '', ctaLink = '#', icon = '', scoreText = '', ctaText = '';
+  let colorClass = '', bgClass = '', borderClass = '';
+
+  if(totalPoints <= 4) {
+    icon = '🎉';
+    title = "🎉 Seu intestino aparenta estar saudável!";
+    text = "Você mantém hábitos que equilibram sua microbiota intestinal. Ainda assim, fatores como estresse, antibióticos e excesso de açúcar podem prejudicar o intestino silenciosamente. É hora de potencializar sua saúde!";
+    ctaLink = "./lp-risco1/index.html";
+    ctaText = "🌱 Potencializar Minha Saúde Agora";
+    colorClass = "text-green-700";
+    bgClass = "bg-green-50";
+    borderClass = "border-green-200";
+    scoreText = `Baixo Risco de Disbiose (${totalPoints}/${maxPoints} pontos)`;
+    
+    // Mudar cor da página para verde
+    document.body.className = "min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50";
+  } else if(totalPoints <= 12) {
+    icon = '⚠️';
+    title = "⚠️ Atenção! Sinais de desequilíbrio intestinal";
+    text = "Seu intestino mostra desequilíbrios moderados que podem evoluir para disbiose completa. Mudanças simples podem evitar complicações futuras. É hora de agir preventivamente!";
+    ctaLink = "./lp-risco2/index.html";
+    ctaText = "⚡ Prevenir Disbiose Agora";
+    colorClass = "text-orange-600";
+    bgClass = "bg-yellow-50";
+    borderClass = "border-yellow-200";
+    scoreText = `Risco Moderado de Disbiose (${totalPoints}/${maxPoints} pontos)`;
+    
+    // Mudar cor da página para amarelo
+    document.body.className = "min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-amber-50";
+  } else {
+    icon = '🚨';
+    title = "🚨 Atenção máxima! Seu intestino precisa de cuidados urgentes.";
+    text = "Sintomas de disbiose estão presentes e podem estar prejudicando sua saúde significativamente. Ação imediata é necessária para reverter o quadro e restaurar sua qualidade de vida.";
+    ctaLink = "./lp-risco3/index.html";
+    ctaText = "🚨 Reverter Disbiose Urgentemente";
+    colorClass = "text-red-600";
+    bgClass = "bg-red-50";
+    borderClass = "border-red-200";
+    scoreText = `Alto Risco de Disbiose (${totalPoints}/${maxPoints} pontos)`;
+    
+    // Mudar cor da página para vermelho
+    document.body.className = "min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-rose-50";
+  }
+
+  resultIcon.textContent = icon;
+  resultTitle.textContent = title;
+  resultText.textContent = text;
+  resultScore.querySelector('p').textContent = scoreText;
+  resultScore.className = `${bgClass} border ${borderClass} rounded-2xl p-6 mb-8 fade-in ${colorClass}`;
+  resultCTA.href = ctaLink;
+  resultCTA.textContent = ctaText;
+}
+
+/* ================= Proteções de cópia ================= */
+document.addEventListener('contextmenu', e => e.preventDefault()); // Bloqueio clique direito
+document.addEventListener('dragstart', e => e.preventDefault());   // Bloqueio arrastar elementos
+document.addEventListener('keydown', e => {
+  // Bloquear Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I e F12
+  if (
+    (e.ctrlKey && ['c','s','u','i'].includes(e.key.toLowerCase())) || 
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') || 
+    e.key === 'F12' || 
+    e.key === 'PrintScreen'
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
