@@ -109,7 +109,7 @@
   
   /* Mobile readability: add safe side padding for headings */
   @media (max-width: 640px) {
-    h1, h2, h3 {
+    h1, h2, h3, p, ul, li {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -631,9 +631,8 @@
         e.preventDefault();
         const cta = document.getElementById('cta');
         if (!cta) return;
-        const checkoutBtn = cta.querySelector("a[href^='http']");
-        const targetEl = checkoutBtn || cta;
-        const y = targetEl.getBoundingClientRect().top + window.pageYOffset - 16;
+        // Scroll to the top of CTA so título e botão fiquem no viewport
+        const y = cta.getBoundingClientRect().top + window.pageYOffset - 8;
         window.scrollTo({ top: y, behavior: 'smooth' });
       });
     });
