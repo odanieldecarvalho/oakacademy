@@ -139,32 +139,32 @@ img.avatar {
 	opacity: 0.7;
 }
 
-/* Dark mode support */
+/* Dark mode support – manter layout claro mesmo no modo escuro do sistema */
 @media (prefers-color-scheme: dark) {
 	body {
-		color: #E8F2EC;
-		background: radial-gradient(1200px 800px at 20% 10%, #0f2a1c, transparent 60%),
-			linear-gradient(160deg, #0b1510 0%, #123321 100%);
+		color: var(--ink);
+		background: radial-gradient(1200px 800px at 20% 10%, var(--mint), transparent 60%),
+			linear-gradient(160deg, var(--sand) 0%, var(--mint) 100%);
 	}
 
 	.link-button {
-		background: rgba(10, 24, 17, 0.6);
-		border-color: rgba(180, 235, 205, 0.12);
-		color: #E8F2EC;
+		background: rgba(255, 255, 255, 0.85);
+		border-color: rgba(31, 109, 61, 0.12);
+		color: var(--ink);
 	}
 
 	.link-button:hover {
-		background: rgba(16, 36, 26, 0.8);
+		background: var(--white);
 	}
 
 	.link-button .icon {
-		background: linear-gradient(135deg, rgba(233, 246, 239, 0.08), rgba(255,255,255,0.02));
-		color: #BDE9CB;
-		border-color: rgba(189, 233, 203, 0.16);
+		background: linear-gradient(135deg, var(--mint), var(--white));
+		color: var(--forest);
+		border-color: rgba(31, 109, 61, 0.16);
 	}
 
 	.avatar {
-		box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+		box-shadow: var(--shadow);
 	}
 }
 
