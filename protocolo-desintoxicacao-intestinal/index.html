@@ -106,6 +106,14 @@
       padding: 3rem 0;
     }
   }
+  
+  /* Mobile readability: add safe side padding for headings */
+  @media (max-width: 640px) {
+    h1, h2, h3 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 </style>
 <!-- Structured Data: Product Offer -->
 <script type="application/ld+json">
@@ -614,6 +622,22 @@
       e.key === 'PrintScreen'
     ) e.preventDefault();
   });
+  
+  // Smooth scroll to CTA so the checkout button is immediately visible (esp. on mobile)
+  (function() {
+    const links = document.querySelectorAll("a[href*='#cta']");
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const cta = document.getElementById('cta');
+        if (!cta) return;
+        const checkoutBtn = cta.querySelector("a[href^='http']");
+        const targetEl = checkoutBtn || cta;
+        const y = targetEl.getBoundingClientRect().top + window.pageYOffset - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
+  })();
 </script>
 
 </body>
